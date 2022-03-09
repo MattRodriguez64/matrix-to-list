@@ -16,8 +16,7 @@ Dim lastCell As String
 Dim firstCellXY(2) As Integer
 Dim lastCellXY(2) As Integer
 Dim i, j As Integer
-
-
+Dim startOfTableCellXY(2) As Integer
 
 
 
@@ -75,12 +74,19 @@ Dim i, j As Integer
   
   Set startOfTableCell = Application.InputBox(prompt:="Please select any cell", Type:=8)
   startOfTableCell = Replace(startOfTableCell.Address, "$", "")
-  MsgBox (startOfTableCell)
+  startOfTableCellXY(0) = Range(startOfTableCell).Row
+  startOfTableCellXY(1) = Range(startOfTableCell).Column
+  MsgBox (startOfTableCell + " - X : " + CStr(startOfTableCellXY(0)) + " Y : " + CStr(startOfTableCellXY(1)))
   
+  'Boucle pour les 111111, 222222, 33333, .....
   
+  'Boucle pour les 123456, 123456, 123456, .....
+  
+  'Boucle contenant les valeurs ligne par ligne
+  For i = 1 To (numberOfColumns * numberOfRows)
+  
+  Next
 
-
-  
 'Highlight Cell Range
   rng.Interior.Color = vbYellow
 
