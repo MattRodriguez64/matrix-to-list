@@ -1,1 +1,1 @@
-# matrice-to-list
+# matrix-to-list
