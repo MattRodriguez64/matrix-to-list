@@ -1,4 +1,4 @@
-Sub MatriceToList()
+Sub MatrixToList()
 '***************************************************************************
 '@Name: MatrixToList
 '@Version: Final
@@ -77,7 +77,7 @@ Dim currentCellX, currentCellY As Integer
   End If
   
   'Get the cell of the future list that will be generated
-  Set startOfTableCell = Application.InputBox(prompt:="Please select any cell", Type:=8)
+  Set startOfTableCell = Application.InputBox(prompt:="Sélectionnez la cellule à partir de laquelle sera générée la liste", Type:=8)
   'Replace the dollar caracter to only have the cell name
   startOfTableCell = Replace(startOfTableCell.Address, "$", "")
   'Get the row number of the first cell of the list
